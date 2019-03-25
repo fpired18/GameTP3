@@ -8,5 +8,10 @@
 
 import Foundation
 
-print("Hello, World!")
-
+func gameMenu() {
+    let partOfGame = PartOfGame()
+    
+    partOfGame.game()
+    
+}
+gameMenu()
