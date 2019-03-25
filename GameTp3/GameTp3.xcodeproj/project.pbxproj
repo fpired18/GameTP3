@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E44689672248E07200DCCF15 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44689662248E07200DCCF15 /* main.swift */; };
+		E446896F2248E34B00DCCF15 /* Soldiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446896E2248E34B00DCCF15 /* Soldiers.swift */; };
+		E44689712248E36600DCCF15 /* PartOfGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44689702248E36600DCCF15 /* PartOfGame.swift */; };
+		E44689732248E37800DCCF15 /* Gamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44689722248E37800DCCF15 /* Gamers.swift */; };
+		E44689752248E39000DCCF15 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44689742248E39000DCCF15 /* Teams.swift */; };
+		E44689772248E3AE00DCCF15 /* Fight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44689762248E3AE00DCCF15 /* Fight.swift */; };
+		E44689792248E3C200DCCF15 /* Trunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44689782248E3C200DCCF15 /* Trunk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		E44689632248E07200DCCF15 /* GameTp3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameTp3; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44689662248E07200DCCF15 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E446896E2248E34B00DCCF15 /* Soldiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soldiers.swift; sourceTree = "<group>"; };
+		E44689702248E36600DCCF15 /* PartOfGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfGame.swift; sourceTree = "<group>"; };
+		E44689722248E37800DCCF15 /* Gamers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamers.swift; sourceTree = "<group>"; };
+		E44689742248E39000DCCF15 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		E44689762248E3AE00DCCF15 /* Fight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fight.swift; sourceTree = "<group>"; };
+		E44689782248E3C200DCCF15 /* Trunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trunk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,23 @@
 		E44689652248E07200DCCF15 /* GameTp3 */ = {
 			isa = PBXGroup;
 			children = (
+				E446896D2248E30900DCCF15 /* Classes  */,
 				E44689662248E07200DCCF15 /* main.swift */,
 			);
 			path = GameTp3;
+			sourceTree = "<group>";
+		};
+		E446896D2248E30900DCCF15 /* Classes  */ = {
+			isa = PBXGroup;
+			children = (
+				E446896E2248E34B00DCCF15 /* Soldiers.swift */,
+				E44689702248E36600DCCF15 /* PartOfGame.swift */,
+				E44689722248E37800DCCF15 /* Gamers.swift */,
+				E44689742248E39000DCCF15 /* Teams.swift */,
+				E44689762248E3AE00DCCF15 /* Fight.swift */,
+				E44689782248E3C200DCCF15 /* Trunk.swift */,
+			);
+			path = "Classes ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +145,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44689792248E3C200DCCF15 /* Trunk.swift in Sources */,
+				E44689772248E3AE00DCCF15 /* Fight.swift in Sources */,
+				E446896F2248E34B00DCCF15 /* Soldiers.swift in Sources */,
+				E44689752248E39000DCCF15 /* Teams.swift in Sources */,
 				E44689672248E07200DCCF15 /* main.swift in Sources */,
+				E44689732248E37800DCCF15 /* Gamers.swift in Sources */,
+				E44689712248E36600DCCF15 /* PartOfGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

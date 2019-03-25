@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  Teams.swift
 //  GameTp3
 //
 //  Created by Frédéric on 25/03/2019.
@@ -7,6 +7,3 @@
 //
 
 import Foundation
-
-print("Hello, World!")
-
