@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// the class Teams defines the object team
 class Teams {
     
     var temporaryName = [String]()

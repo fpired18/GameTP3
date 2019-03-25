@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// the class PartOfGame defines the object part
 class PartOfGame {
     
     var gamer1 = Gamers()
@@ -56,9 +56,8 @@ class PartOfGame {
         fight.maxNumberOfLive2 = team.totalLifeTeam()
         team.viewTeam(team: team2, gamerNumber: gamers[numberGamer2].number)
         
-        //print("Voici le total des point de vie de l'équipe 2 : \(fight.maxNumberOfLive2)")
         for i in 0...gamers.count-1 {
-            print("Voici le contenu du tableau des joueurs:  \(gamers[i].name), \(gamers[i].number), \(gamers[i].pseudo)")
+            print("Here is the content of the table of names of players:  \(gamers[i].name), \(gamers[i].number), \(gamers[i].pseudo)")
         }
         print("\n              ============================================")
         print("\n                           TEAMS REMINDER")
@@ -68,37 +67,39 @@ class PartOfGame {
         team.viewTeam(team: team2, gamerNumber: gamers[numberGamer2].number)
         
         repeat {
-            // numberTurn comptabilise le nombre de tour pour informer le gagnant en fin de partie
+            // numberTurn count th number of turns needed to win the game, the information will be given at the end of the game
             numberTurn += 1
             for i in 0...gamers.count-1 {
-                print("\n================================"
-                    + "\n\(gamers[i].pseudo): WANT TO FIGHT OR CARE ? "
-                    + "\n================================"
-                    + "\nStape : 1 to fight "
-                    + "\nStape : 2 to care ")
-                numberGamer = gamers[i].number
+                if fight.maxNumberOfLive2 > 0 {
+                    print("\n================================"
+                        + "\n\(gamers[i].pseudo): WANT TO FIGHT OR CARE ? "
+                        + "\n================================"
+                        + "\nStape : 1 to fight "
+                        + "\nStape : 2 to care ")
+                    numberGamer = gamers[i].number
                 
-                if let choice = readLine() {
-                    switch choice {
-                    case "1":
-                        fight.choiceSoldier(choice: choice, numberGamer: gamers[i].number, team1: team1, team2: team2)
-                    case "2":
-                        fight.choiceSoldier(choice: choice, numberGamer: gamers[i].number, team1: team1, team2: team2)
-                    default:
-                        print("I don't understand.")
+                    if let choice = readLine() {
+                        switch choice {
+                        case "1":
+                            fight.choiceSoldier(choice: choice, numberGamer: gamers[i].number, team1: team1, team2: team2)
+                        case "2":
+                            fight.choiceSoldier(choice: choice, numberGamer: gamers[i].number, team1: team1, team2: team2)
+                        default:
+                            print("I don't understand.")
+                        }
                     }
                 }
             }
         } while fight.maxNumberOfLive1 != 0 && fight.maxNumberOfLive2 != 0
         if fight.maxNumberOfLive1 <= 0 {
             print(banner2)
-            print("Bravo \(gamers[numberGamer1].pseudo) your team has won !!!")
+            print("Bravo \(gamers[numberGamer2].pseudo) your team has won !!!")
             print("It took \(numberTurn) laps to win the fight...")
             print(banner3)
         }
         if fight.maxNumberOfLive2 <= 0 {
             print(banner2)
-            print("Bravo \(gamers[numberGamer2].pseudo) your team has won !!!")
+            print("Bravo \(gamers[numberGamer1].pseudo) your team has won !!!")
             print("It took \(numberTurn) laps to win the fight...")
             print(banner3)
         }

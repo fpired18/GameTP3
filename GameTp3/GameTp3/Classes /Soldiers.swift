@@ -23,7 +23,7 @@ enum TypeWeapon: Int {
     
     
 }
-
+// This parent class defines the generic object of the soldier
 class Soldiers {
     var name: String
     var type: String
@@ -65,7 +65,7 @@ class Soldiers {
         return weapon
     }
 }
-
+//This classes girl allows to bring a complementary property
 class Fights: Soldiers {
     init() {
         super.init(name: "", type: "fight", numberPointOfLive: 100, numberPointOfAttack: 10, weapon: .sword)

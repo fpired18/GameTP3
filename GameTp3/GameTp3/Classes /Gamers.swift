@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// the class Gamers defines the object gamers
 class Gamers {
     var name = ""
     var pseudo = ""

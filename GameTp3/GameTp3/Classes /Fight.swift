@@ -77,6 +77,7 @@ class Fight {
                 validationMage = false
             } else {
                 repeat {
+                    validation = true
                     print("\nCHOOSE A MEMBER OF YOUR TEAM... ")
                     
                     team.viewTeam(team: teamSwap1, gamerNumber: numberGamerSwap)
@@ -143,7 +144,7 @@ class Fight {
             validation = true
             // This loop has the mission to control the presence of a magus in the team and if it is still alive
             
-            for i in 0..<teamSwap1.count-1 {
+            for i in 0..<teamSwap1.count {
                 if teamSwap1[i].type == "magus" {
                     soldierSwap1 = teamSwap1[i]
                     // Here we capture the initial value of the attack of the soldier
@@ -153,7 +154,7 @@ class Fight {
                         validation = false
                     }
                 }
-                
+            }
                 if validation {
                     
                     soldierSwap1 = trunk.openingTrunk(soldier: soldierSwap1, choice: choice)
@@ -192,7 +193,7 @@ class Fight {
                     
                     // Return of the initial strike
                     soldierSwap1.numberPointsOfAttack = initialForce
-                }
+                
             }
         }
     }

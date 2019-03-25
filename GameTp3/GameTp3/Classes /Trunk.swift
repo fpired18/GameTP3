@@ -32,7 +32,7 @@ class Trunk {
         
         if controle == 1 {
             print("\nHere the new strike force of \(soldier.type) : \(soldier.numberPointsOfAttack)"
-                + "\n----------------------------------------") // modifier
+                + "\n----------------------------------------")
         }
         return soldier
     }
