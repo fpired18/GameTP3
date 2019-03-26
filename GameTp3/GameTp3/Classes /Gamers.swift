@@ -55,10 +55,8 @@ class Gamers {
             
             print("Hello \(gamerName), what nickname did you choose to participate in this game ? ")
             gamerPseudoControl = entranceControl()
-            print("Voici la valeur du retour de entranceControl() \(gamerPseudoControl)")
             if gamerNumber == 1 {
                 pseudo1 = gamerPseudoControl
-                print("Voici la valeur de pseudo1 \(pseudo1)")
             } else {
                 controlPseudo = caseControl(pseudo1Case: pseudo1, gamerPseudoControlCase: gamerPseudoControl)
                 if controlPseudo {

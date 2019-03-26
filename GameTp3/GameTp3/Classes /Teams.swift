@@ -130,7 +130,7 @@ class Teams {
         
         if oneTime == 1 {
             print("\nHere are the team members: \(gamerNumber) ")
-            print("-----------------------------")
+            print("----------------------------")
             for i in 0..<team.count {
                 print("Step :", i+1, "to have", team[i].name, "is a", team[i].type , "who has",team[i].numberPointsOfLive ,"life and", team[i].numberPointsOfAttack , "attack")
                 maxPointOfLiveTeamSwap += team[i].numberPointsOfLive

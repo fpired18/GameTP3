@@ -27,8 +27,23 @@ enum TypeWeapon: Int {
 class Soldiers {
     var name: String
     var type: String
-    var numberPointsOfLive: Int
+    //var numberPointsOfLive: Int
     var numberPointsOfAttack: Int
+    var numberPointsOfLive: Int {
+        willSet {
+            print("I AM HURT !!!!")
+            print("--------------\n")
+        }
+        didSet {
+            if oldValue < numberPointsOfLive {
+                print("Thank you mage for treating me ")
+                print("------------------------------/n")
+            } else {
+                print("Ouch... I just took a serious attack !!!")
+                print("----------------------------------------")
+            }
+        }
+    }
     var weapon: TypeWeapon
     
     init(name: String, type: String, numberPointOfLive: Int, numberPointOfAttack: Int, weapon: TypeWeapon) {

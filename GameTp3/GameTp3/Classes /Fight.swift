@@ -13,14 +13,14 @@ class Fight {
     var validation = true
     var maxNumberOfLive1 = 0
     var maxNumberOfLive2 = 0
-    var numberPointOfLiveGame = ["Fight" : 100, "Magus": 80, "Colossus": 120, "Dwarf": 60, "Rider": 150]
+    var numberPointOfLiveGame = ["fight" : 100, "magus": 80, "colossus": 120, "dwarf": 60, "rider": 150]
     var trunk = Trunk()
     
     func displayBattleResul(maxPointOfLiveTeam1: Int, maxPointOfLiveTeam2: Int) {
-        print("\n====================================================")
+        print("\n=====================================================")
         print("Here is the number of life points of the team 1: \(maxPointOfLiveTeam1)\n"
-            + "   and the number of life points of the team 2: \(maxPointOfLiveTeam2)\n"
-            + "====================================================")
+            + "    and the number of life points of the team 2: \(maxPointOfLiveTeam2)\n"
+            + "=====================================================")
     }
     
     func displayMenu(team: [Soldiers], gamerNumber: Int, oneTime: Int) -> Soldiers {
@@ -52,6 +52,7 @@ class Fight {
         var soldierSwap1 = Soldiers()
         var soldierSwap2 = Soldiers()
         var maxNumberOfLive = maxNumberOfLive2
+        var maxNumberOfLiveSoldier = 0
         var initialForce = 0
         let numberGamerSwap = numberGamer
         var numberGamerSwap2 = 2
@@ -117,13 +118,13 @@ class Fight {
             if validationMage {
                 print("==============================================================")
                 print("You just selected \(soldierSwap1.name) with numberPointsOfAttack property: \(soldierSwap1.numberPointsOfAttack)")
-                print("You just selected \(soldierSwap2.name) with numberPointsOfLife property: \(soldierSwap2.numberPointsOfLive)")
+                print("You just selected \(soldierSwap2.name) with numberPointsOfLife  property: \(soldierSwap2.numberPointsOfLive)")
                 print("==============================================================\n")
-            }
-            if validationMage {
+            
                 if soldierSwap1.numberPointsOfAttack > soldierSwap2.numberPointsOfLive {
                     maxNumberOfLive -= soldierSwap2.numberPointsOfLive
                     soldierSwap2.numberPointsOfLive = 0
+                    
                 } else {
                     soldierSwap2.numberPointsOfLive -= soldierSwap1.numberPointsOfAttack
                     maxNumberOfLive -= soldierSwap1.numberPointsOfAttack
@@ -165,20 +166,24 @@ class Fight {
                     
                     for (typeSoldier, numberPointOfLive) in numberPointOfLiveGame {
                         if typeSoldier == soldierSwap2.type {
-                            // recovery of the maximum number of life points depending on the type of soldie
-                            maxNumberOfLive = numberPointOfLive
+                            // recovery of the maximum number of life points depending on the type of soldier
+                            maxNumberOfLiveSoldier = numberPointOfLive
                         }
                     }
-                    if soldierSwap2.numberPointsOfLive == maxNumberOfLive {
+                    if soldierSwap2.numberPointsOfLive == maxNumberOfLiveSoldier {
                         print("No need to treat him he is in great shape ! ")
                         validation = false
                     }
                     if soldierSwap2.numberPointsOfLive <= 0 {
                         print("You arrive too late, your soldier is dead \n")
                         validation = false
+                    }
+                    if (soldierSwap2.numberPointsOfLive + soldierSwap1.numberPointsOfAttack) > maxNumberOfLiveSoldier {
+                        soldierSwap2.numberPointsOfLive = maxNumberOfLiveSoldier
                     } else {
                         soldierSwap2.numberPointsOfLive += soldierSwap1.numberPointsOfAttack
                     }
+                    
                     if numberGamer == 1 && validation {
                         maxNumberOfLive1 += soldierSwap1.numberPointsOfAttack
                     }
